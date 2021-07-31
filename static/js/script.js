@@ -1,0 +1,1 @@
+alert("Hellow From External JS File")

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+</head>
+
+<body>
+    <h2>Final Results</h2>
+    <!-- The output is {{result}} -->
+
+    {#
+    {% if result>=50 %}
+    <h1>Your Result is Passed</h1>
+    {% else %}
+    <h1>Your Result is Failed</h1>
+    {% endif %}
+    #}
+
+    <!-- ITERATE THROUGH DICTIONARY -->
+    <table border=2>
+        {% for key,value in result.items() %}
+        <tr>
+            {# This is a comment section #}
+            <th>{{ key }}</th>
+            <th>{{ value }}</th>
+        </tr>
+        {% endfor %}
+    </table>
+
+
+
+</body>
+
+</html>

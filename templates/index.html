@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Card</title>
+    <!-- <style>
+        input[type=text],
+        select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background-color: #4caf50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+    </style> -->
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- <script>
+        alert("This page is loaded")
+    </script> -->
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+
+<body>
+    <h2>Report Card</h2>
+    <!-- action must be same as URL Route written in .py file -->
+    <form action="/submit" method="POST">
+        <label for="science">Science:</label><br>
+        <input type="text" id="science" name="science" value="0"><br>
+        <label for="maths">Maths:</label><br>
+        <input type="text" id="maths" name="maths" value="0"><br>
+        <label for="c">C:</label><br>
+        <input type="text" id="c" name="c" value="0"><br>
+        <label for="datascience">Data Science:</label><br>
+        <input type="text" id="datascience" name="datascience" value="0"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p>If you click on "Submit" button, the form data will be sent to a page called "/submit"</p>
+</body>
+
+</html>
